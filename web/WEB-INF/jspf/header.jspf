@@ -1,0 +1,32 @@
+<%@ page pageEncoding="UTF-8" %>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Онлайн бібліотека</title>
+    <link href="../css/style_main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <div class="logo">
+            <img src="../images/logo.png" alt="Логотип" name="logo" />
+        </div>
+        <div class="descr">
+            <h3>Онлайн бібліотека</h3>
+        </div>
+        <div class="search_form">
+            <div class="search-photo">
+                <img src="../images/search.jpg" alt="Пошук" name="search-photo" />
+             </div>
+            <form name="search_form" method="GET" action="books.jsp">
+                <input type="text" name="searchString" value="" size="98" />
+                <input class="search_button" type="submit" value="Пошук" name="search_button" />
+                <select name="search_option">
+                    <option>Назва</option>
+                    <option>Автор</option>
+                </select>
+            </form>
+        </div>
+    </div>

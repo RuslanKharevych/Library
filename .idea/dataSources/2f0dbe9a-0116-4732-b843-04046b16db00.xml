@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Ruslan@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="Ruslan">
+      <ObjectId>16475</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12938</ObjectId>
+    </database>
+    <database id="4" parent="1" name="Login">
+      <ObjectId>16526</ObjectId>
+    </database>
+    <role id="5" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="6" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="11" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-01-14.10:35:20.815</IntrospectionTimestamp>
+      <IntrospectionStateNumber>825</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="12" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="13" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="14" parent="2" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+    </schema>
+    <schema id="15" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+    </schema>
+    <schema id="16" parent="2" name="information_schema">
+      <ObjectId>12648</ObjectId>
+    </schema>
+    <table id="17" parent="11" name="postachalniki">
+      <ObjectId>16479</ObjectId>
+      <StateNumber>572</StateNumber>
+    </table>
+    <table id="18" parent="11" name="torg_tochka">
+      <ObjectId>16482</ObjectId>
+      <StateNumber>572</StateNumber>
+    </table>
+    <table id="19" parent="11" name="tovaru">
+      <ObjectId>16476</ObjectId>
+      <StateNumber>572</StateNumber>
+    </table>
+    <table id="20" parent="11" name="zbut">
+      <ObjectId>16485</ObjectId>
+      <StateNumber>572</StateNumber>
+    </table>
+    <routine id="21" parent="11" name="zvit">
+      <ObjectId>16525</ObjectId>
+      <StateNumber>825</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>text</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ConcurrencyKind>unsafe</ConcurrencyKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <column id="22" parent="17" name="id_p">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>572</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="23" parent="17" name="name_p">
+      <Position>2</Position>
+      <DataType>varchar(80)|0</DataType>
+      <StateNumber>572</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="24" parent="17" name="nacinka">
+      <Position>3</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>572</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="25" parent="17" name="postachalniki_pkey">
+      <ObjectId>16492</ObjectId>
+      <ColNames>id_p</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="26" parent="17" name="postachalniki_pkey">
+      <ObjectId>16493</ObjectId>
+      <ColNames>id_p</ColNames>
+      <UnderlyingIndexName>postachalniki_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="18" name="id_tt">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>572</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="28" parent="18" name="name_tt">
+      <Position>2</Position>
+      <DataType>varchar(80)|0</DataType>
+      <StateNumber>572</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="29" parent="18" name="torg_tochka_pkey">
+      <ObjectId>16490</ObjectId>
+      <ColNames>id_tt</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="30" parent="18" name="torg_tochka_pkey">
+      <ObjectId>16491</ObjectId>
+      <ColNames>id_tt</ColNames>
+      <UnderlyingIndexName>torg_tochka_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="31" parent="19" name="id_t">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>572</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="32" parent="19" name="name_t">
+      <Position>2</Position>
+      <DataType>varchar(80)|0</DataType>
+      <StateNumber>572</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="33" parent="19" name="price">
+      <Position>3</Position>
+      <DataType>double precision|0</DataType>
+      <StateNumber>572</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <index id="34" parent="19" name="tovaru_pkey">
+      <ObjectId>16488</ObjectId>
+      <ColNames>id_t</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="35" parent="19" name="tovaru_pkey">
+      <ObjectId>16489</ObjectId>
+      <ColNames>id_t</ColNames>
+      <UnderlyingIndexName>tovaru_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="36" parent="20" name="id_t">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>572</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="37" parent="20" name="id_tt">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>572</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="38" parent="20" name="id_p">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>572</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="39" parent="20" name="kilkist">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>572</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="40" parent="20" name="date">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>572</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <foreign-key id="41" parent="20" name="cs_tovaru">
+      <ObjectId>16494</ObjectId>
+      <ColNames>id_t</ColNames>
+      <RefTableId>16476</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>tovaru</RefTableName>
+      <RefKeyName>tovaru_pkey</RefKeyName>
+      <RefColNames>id_t</RefColNames>
+    </foreign-key>
+    <foreign-key id="42" parent="20" name="cs_torg_tochka">
+      <ObjectId>16499</ObjectId>
+      <ColNames>id_tt</ColNames>
+      <RefTableId>16482</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>torg_tochka</RefTableName>
+      <RefKeyName>torg_tochka_pkey</RefKeyName>
+      <RefColNames>id_tt</RefColNames>
+    </foreign-key>
+    <foreign-key id="43" parent="20" name="cs_postachalniki">
+      <ObjectId>16504</ObjectId>
+      <ColNames>id_p</ColNames>
+      <RefTableId>16479</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>postachalniki</RefTableName>
+      <RefKeyName>postachalniki_pkey</RefKeyName>
+      <RefColNames>id_p</RefColNames>
+    </foreign-key>
+    <argument id="44" parent="21">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>text|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>

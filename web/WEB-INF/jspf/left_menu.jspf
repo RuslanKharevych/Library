@@ -1,0 +1,35 @@
+<%@ page import="beans.Genre" %>
+<%@ page pageEncoding="UTF-8" %>
+<div class="sidebar1">
+    <h4>Жанри:</h4>
+    <ul class="nav">
+        <jsp:useBean id="genreList" class="beans.GenreList" scope="application"/>
+        <%
+
+            long selectedGenreId = 0;
+
+
+            if (request.getParameter("genre_id") != null) {
+                selectedGenreId = Long.valueOf(request.getParameter("genre_id"));
+
+            }
+
+        %>
+
+        <%
+            for (Genre genre : genreList.getGenreList()) {
+                if (selectedGenreId != 0 && selectedGenreId == genre.getId_g()) {
+        %>
+        <li style="background-color: black;" ><a style="color:white" href="books.jsp?genre_id=<%=genre.getId_g()%>"><%=genre.getName_g()%></a></li>
+        <%        } else {
+
+        %>
+        <li><a href="books.jsp?genre_id=<%=genre.getId_g()%>"><%=genre.getName_g()%></a></li>
+        <%                }
+        }
+
+        %>
+
+    </ul>
+</div>
+
